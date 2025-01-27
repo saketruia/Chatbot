@@ -1,0 +1,86 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #ff5733;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #f0f0f0;
+}
+
+section {
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #ff5733;
+}
+
+section img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+/* Layout */
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px; /* Two columns: left for content, right for chatbot */
+    gap: 20px; /* Space between the two columns */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.chatbot-section {
+    position: fixed;
+    top: 20px; /* Space from the top */
+    right: 20px; /* Space from the right */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    width: 350px; /* Fixed width for the chatbot */
+}
+
+.chat-bot {
+    border: none;
+    border-radius: 8px; /* Rounded corners for better appearance */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for styling */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-layout {
+        grid-template-columns: 1fr; /* Stack content vertically on smaller screens */
+    }
+
+    .chatbot-section {
+        position: static; /* Remove fixed positioning for smaller screens */
+        margin: 20px auto; /* Center chatbot */
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
