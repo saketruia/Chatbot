@@ -14,9 +14,13 @@ async def handle_request( request: Request):
     parameters =payload['queryResult']['parameters']
     output_contexts=payload['queryResult']['outputContexts']
 
+    intent_handler_dict = {
+        'order.add - context: ongoing-order': add_to_order,
+        'order.remove - context: ongoing-order': remove_from_order,
+        'order.complete - context: ongoing-order': complete_order,
+        'track.order - context: ongoing-tracking': track_order
+    }
 
-    if intent=="track.order - context: ongoing-tracking":
-        return track_order(parameters)
     
 
 def track_order(parameters: dict, session_id: str):
