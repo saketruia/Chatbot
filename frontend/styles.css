@@ -1,4 +1,4 @@
-/* General Styling */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -46,8 +46,8 @@ section img {
 /* Layout */
 .page-layout {
     display: grid;
-    grid-template-columns: 1fr 350px; /* Two columns: left for content, right for chatbot */
-    gap: 20px; /* Space between the two columns */
+    grid-template-columns: 1fr 350px; 
+    gap: 20px; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -68,8 +68,8 @@ section img {
 
 .chat-bot {
     border: none;
-    border-radius: 8px; /* Rounded corners for better appearance */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for styling */
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 /* Responsive Design */
@@ -79,8 +79,8 @@ section img {
     }
 
     .chatbot-section {
-        position: static; /* Remove fixed positioning for smaller screens */
+        position: static; 
         margin: 20px auto; /* Center chatbot */
-        width: 90%; /* Adjust width for smaller screens */
+        width: 90%; 
     }
 }
